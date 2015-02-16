@@ -3,20 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
-	<link rel="stylesheet" href="app.js">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<title>Title goes here</title>
 </head>
 
 <body>
-	<h1>hello world</h1>
+	<div class="container">
 
-	<nav class=""></nav>
-	<header class=""></header>
-	<section class=""></section>
-	<footer class=""></footer>
+		<div class="row">
+			<div class="col-xs-12 first">
+				<h1 class="visible-xs">extra small screen only</h1>
+				<h1 class="visible-sm">small screen only</h1>
+				<h1 class="visible-md">medium screen only</h1>
+				<h1 class="visible-lg">large screen only</h1>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="col-xs-6 second col-lg-3">col-xs-6</div>
+			<div class="col-xs-6 second col-lg-9">col-xs-6</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<h2 class="hidden-xs">I will disppear on mobile</h2>
+			</div>
+			<div class="col-sm-4">col-s-4</div>
+			<div class="col-sm-4">col-s-4</div>
+		</div>
+
+	</div>
 
 
 
