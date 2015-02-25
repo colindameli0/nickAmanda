@@ -3,42 +3,96 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
 	<title>Title goes here</title>
 </head>
 
 <body>
-	<div class="container">
+	<div id="home">
 
-		<div class="row">
-			<div class="col-xs-12 first">
-				<h1 class="visible-xs">extra small screen only</h1>
-				<h1 class="visible-sm">small screen only</h1>
-				<h1 class="visible-md">medium screen only</h1>
-				<h1 class="visible-lg">large screen only</h1>
-			</div>
-		</div>
+<!-- 		<div class="outside">
+			<div class="inside"></div>
+		</div> -->
+		
+	</div><!-- ../#home -->
 
-		<div class="row">
-			<div class="col-xs-6 second col-lg-3">col-xs-6</div>
-			<div class="col-xs-6 second col-lg-9">col-xs-6</div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm-4">
-				<h2 class="hidden-xs">I will disppear on mobile</h2>
-			</div>
-			<div class="col-sm-4">col-s-4</div>
-			<div class="col-sm-4">col-s-4</div>
-		</div>
-
+	<div id="test">
+	<ul class="menu">
+		<li><a href="#home">Home</a></li>
+		<li><a href="#party">Wedding Party</a></li>
+		<li><a href="#">Venue</a></li>
+		<li><a href="#">Registry</a></li>
+		<li><a href="#">RSVP</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	
 	</div>
+	
+	<div id="party">
+		<div class="container">
+			<h1>Bridal Party</h1>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4">			
+					<div class="headShot">
+					<img src="http://placehold.it/292x292">
+						<p>xxxxx xxxxxxxx</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero sint nam nisi soluta provident accusamus modi.</p>
+					</div>
+				</div>	
+				<div class="col-xs-12 col-sm-4">
+					<div class="headShot">
+						<img src="http://placehold.it/292x292">
+						<p>xxxxx xxxxxxxx</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero sint nam nisi soluta provident accusamus modi.</p>
+					</div>
+				</div>
+			
+				<div class="col-xs-12 col-sm-4">
+					<div class="headShot">
+						<img src="http://placehold.it/292x292">
+						<p>xxxxx xxxxxxxx</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero sint nam nisi soluta provident accusamus modi.</p>
+					</div>
+				</div>
+			</div><!-- ../row -->
 
+			<h1 class="grooms">Groomsmen</h1>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-4">			
+					<div class="headShot">
+					<img src="http://placehold.it/292x292">
+						<p>Andrew Guytingco</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero sint nam nisi soluta provident accusamus modi.</p>
+					</div>
+				</div>	
+				<div class="col-xs-12 col-sm-4">
+					<div class="headShot">
+						<img src="http://placehold.it/292x292">
+						<p>xxxxx xxxxxxxx</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero sint nam nisi soluta provident accusamus modi.</p>
+					</div>
+				</div>
+			
+				<div class="col-xs-12 col-sm-4">
+					<div class="headShot">
+						<img src="http://placehold.it/292x292">
+						<p>xxxxx xxxxxxxx</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero sint nam nisi soluta provident accusamus modi.</p>
+					</div>
+				</div>
+			</div><!-- ../row -->
+		</div><!-- ../container -->
+	</div><!-- ../party -->
 
-
+	<div id="contact">
+		<h1>Venue</h1>
+		<div id="map-canvas"></div>
+	</div><!-- .../contact -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="app.js"></script>
 </body>
 </html>
