@@ -18,6 +18,11 @@ body {
 	color: #000;
 	font-size: 20px;
 	font-weight: 100;
+	height: 100%;
+}
+
+html {
+	height: 100%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -27,6 +32,7 @@ h1, h2, h3, h4, h5 {
 a {
 	text-decoration: none;
 	color: #000;
+	outline: 0;
 }
 
 input[type="text"],
@@ -48,15 +54,24 @@ input:focus::-webkit-input-placeholder {
  }
 
 
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Dancing Script', cursive;
+
+$guyBlue: #1ca9e1;
+$girlPink: #ee2283;
+$gold: #837b30;
+
+
 
 // ==========================================================================
 
 #home {
 	position: relative;
 	background: url('../dist/images/background.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
 	background-size: cover;
-	width: 100%;
-	height: 780px;
+	height: 100%;
 }
 
 #home:after {
@@ -66,18 +81,59 @@ input:focus::-webkit-input-placeholder {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(0,0,0, 0.1);
 }
+
+.wrap {
+	padding: 40px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background:rgba(255,255,255, 0.7);
+	width: 100%;
+	.inner-wrap {
+		width: 80%;
+		margin: 0 auto;
+		h1.lovers {
+			font-family: 'Dancing Script', cursive;
+			font-size: 42px;
+		}
+		p {
+			text-transform: uppercase;
+			font-family: 'Oswald', sans-serif;
+		}
+		span {
+			color: $girlPink;		}
+	}
+}
+
 
 // *********************************
 // NAVIGATION MENU
 // *********************************
 
+nav {
+	height: auto;
+	overflow: auto;
+	z-index: 9999;
+	background: #fff;
+	opacity: .95;
+	-webkit-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+	.emblem {
+		width: 20%;
+		float: left;
+		padding-left: 5px;
+		img {
+			width: 25%;
+			float: left;
+		}
+	}
+}
+
 ul.menu {
-	display: inline-block;
-	padding: 15px 0 15px 0;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.1);
+	float: left;
+	padding: 25px 60px 0 0;
+	width: 80%;
 	text-align: right;
 	// position: fixed;
 	margin: 0;
@@ -86,63 +142,82 @@ ul.menu {
 		display: inline-block;
 		padding: 0 10px;
 		a {
-			text-transform: uppercase;
+			text-transform: lowercase;
 			cursor: pointer;
 			text-decoration: none;
+			color: #888;
+			font-family: 'Oswald', sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+			opacity: 0.8;
+			outline: 0;
+			transition: all .3s ease;
+			&:hover {
+				color: $gold;
+			}
 		}
 	}
 }
-
-.outside {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 0 25% !important;
-	height: 100%;
-	max-height: 1000px;
-	display: table;
-	text-align: center;
-	.inside {
-		display: table-cell;
-		vertical-align: middle !important;
-	}
-}
-
 
 // *********************************
 // WEDDING PARTY #party
 // *********************************
 
+@mixin headings {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Dancing Script', cursive;
+}
+
 #party {
 	margin-top: 50px;
 	h1 {
-		text-align: center;
-		text-transform: uppercase;
-	}
-	h1.grooms {
-		margin-top: 50px;
+		@include headings;
 	}
 	.row {
 		margin-top: 50px;
+		.name {
+			font-weight: 800;
+			text-align: center;
+			margin-top: 15px;
+		}
+		.best {
+			color: $guyBlue;
+		}
+		span {
+			color: $girlPink;
+			font-size: 16px;
+			text-transform: uppercase;
+			display: block;
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
 		.headShot {
 			text-align: center;
 			img {
 				border-radius: 50%;
-				border: 10px solid #eee;
-				width: 85%;
+				border: 6px solid #fff;
+				box-shadow: 5px 5px 10px rgba(127,125,126,.7), -5px -5px 10px rgba(127,125,126,.7);
+				width: 80%;
+				text-align: center;
 			}
+		}
+		.left {
+			text-align: right;
 		}
 	}	
 }
 
 // *********************************
-// CONTACT #contact
+// Venue #venue
 // *********************************
 
-#contact {
+#venue {
 	h1 {
 		margin-top: 50px;
+		@include headings;
 	}
 }
 
@@ -151,8 +226,24 @@ ul.menu {
 	height: 0;
 	padding-bottom: 25%;
 	width: 100%;
-
 }
+
+
+// *********************************
+// RSVP #rsvp
+// *********************************
+
+#rsvp {
+	background: url('../dist/images/section-background.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	h1 {
+		@include headings;
+	}
+}
+
 
 
 
