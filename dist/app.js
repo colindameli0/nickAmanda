@@ -40,6 +40,14 @@ $(document).ready(function(){
 	      return false;
 	  });
 
-	  $('.single-item').slick();
+	 //MOBILE MENU
+	 $('.menu-icon').click(function(e){
+	 	e.preventDefault();
+	 	$('.menu').slideToggle(500);
+	 });
+
+	 $(".menu li a").on('click', function() {
+	     $(".menu").hide();
+	 });
 
 });
