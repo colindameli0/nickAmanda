@@ -93,7 +93,7 @@ $gold: #837b30;
 			font-family: 'Oswald', sans-serif;
 		}
 		span {
-			color: $girlPink;		}
+			color: $gold;		}
 	}
 }
 
@@ -122,10 +122,9 @@ nav {
 
 ul.menu {
 	float: left;
-	padding: 25px 60px 0 0;
+	padding: 20px 0;
 	width: 80%;
 	text-align: right;
-	// position: fixed;
 	margin: 0;
 	z-index: 10;
 	li {
@@ -153,6 +152,7 @@ ul.menu {
 	display: none;
 }
 
+//MOBILE NAV MENU
 @media (max-width: 768px) {
 	ul.menu {
 		float: none;
@@ -182,16 +182,18 @@ ul.menu {
 
 	.menu-icon {
 		display: block;
-		padding: 10px;
+		padding: 5px 30px;
 		cursor: pointer;
 		.left {
 			width: 50%;
 			float: left;
+			font-size: 22px;
 		}
 		.right {
 			width: 50%;
 			float: right;
 			text-align: right;
+			font-size: 22px;
 		}
 	}
 }
@@ -236,7 +238,8 @@ ul.menu {
 				border-radius: 50%;
 				border: 6px solid #fff;
 				box-shadow: 5px 5px 10px rgba(127,125,126,.7), -5px -5px 10px rgba(127,125,126,.7);
-				width: 80%;
+				width: 250px;
+				height: 250px;
 				text-align: center;
 			}
 		}
@@ -251,17 +254,34 @@ ul.menu {
 // *********************************
 
 #venue {
+	.welcome-wrapper {
+		background: #f1f1f1;
+		color: #000;
+		padding: 30px;
+		font-size: 16px;
+		text-align: center;
+		width: 55%;
+		margin: 25px auto;
+	}
 	h1 {
 		margin-top: 50px;
 		@include headings;
+		a {
+			color: #fff;
+		}
+	}
+	p.venue-info {
+		text-align: center;
 	}
 }
 
 #map-canvas {
+	margin-top: 25px;
 	display: block;
 	height: 0;
 	padding-bottom: 25%;
-	width: 100%;
+	width: 80%;
+	margin: 25px auto;
 }
 
 
@@ -301,12 +321,42 @@ footer {
 			color: #7a7a7a;
 			transition: all 0.4s ease;
 			text-decoration: none;
+			outline: 0;
 			&:hover {
 				color: #f56d45;
 			}
 		}
 	}
 }
+
+
+// *********************************
+// ANIMATION
+// *********************************
+
+.animateblock {
+  opacity: 0;
+  -webkit-transition: all 0.45s linear;
+  -moz-transition: all 0.45s linear;
+  transition: all 0.45s linear;
+}
+
+.animateblock.animated {
+  opacity: 1;
+}
+
+.animateblock.btm {
+  display: block;
+  width: auto;
+  text-align: center;
+  margin-top: 25px;
+}
+.animateblock.btm.animated {
+  margin-top: 0;
+}
+
+
+
 
 // ==========================================================================
 
