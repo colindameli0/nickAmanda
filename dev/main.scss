@@ -272,6 +272,8 @@ ul.menu {
 	}
 	p.venue-info {
 		text-align: center;
+		font-family: 'Oswald', sans-serif;
+		color: $gold;
 	}
 }
 
@@ -317,6 +319,9 @@ footer {
 		text-align: center;
 		font-size: 16px;
 		color: #7a7a7a;
+		span {
+			color: #d12026;
+		}
 		a {
 			color: #7a7a7a;
 			transition: all 0.4s ease;
@@ -376,4 +381,12 @@ footer {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+	#venue .welcome-wrapper {
+		width: 95%;
+	}
+
+	#map-canvas {
+		width: 95%;
+		padding-bottom: 40%;
+	}
 }
