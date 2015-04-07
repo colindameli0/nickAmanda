@@ -260,7 +260,7 @@ ul.menu {
 		padding: 30px;
 		font-size: 16px;
 		text-align: center;
-		width: 55%;
+		width: 100%;
 		margin: 25px auto;
 	}
 	h1 {
@@ -274,6 +274,22 @@ ul.menu {
 		text-align: center;
 		font-family: 'Oswald', sans-serif;
 		color: $gold;
+		a {
+			transition: all 0.3s ease;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	p.accomodations {
+		text-align: center;
+		font-family: 'Oswald', sans-serif;
+		a {
+			transition: all 0.3s ease;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 }
 
@@ -281,8 +297,8 @@ ul.menu {
 	margin-top: 25px;
 	display: block;
 	height: 0;
-	padding-bottom: 25%;
-	width: 80%;
+	padding-bottom: 50%;
+	width: 100%;
 	margin: 25px auto;
 }
 
