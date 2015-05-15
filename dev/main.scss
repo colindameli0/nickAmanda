@@ -13,9 +13,16 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
     clear: both;
  }
 
+ $navyBlue: #003366;
+ $darkOlive: #817b4a;
+ $lightOlive: #d6d0b9;
+
+ $guyBlue: #1ca9e1;
+ $girlPink: #ee2283;
+
 body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color: #000;
+	color: $navyBlue;
 	font-size: 20px;
 	font-weight: 100;
 	height: 100%;
@@ -57,10 +64,6 @@ input:focus::-webkit-input-placeholder {
 // font-family: 'Oswald', sans-serif;
 // font-family: 'Dancing Script', cursive;
 
-$guyBlue: #1ca9e1;
-$girlPink: #ee2283;
-$gold: #837b30;
-
 
 
 // ==========================================================================
@@ -93,7 +96,7 @@ $gold: #837b30;
 			font-family: 'Oswald', sans-serif;
 		}
 		span {
-			color: $gold;		}
+			color: $darkOlive;		}
 	}
 }
 
@@ -142,7 +145,7 @@ ul.menu {
 			outline: 0;
 			transition: all .3s ease;
 			&:hover {
-				color: $gold;
+				color: $darkOlive;
 			}
 		}
 	}
@@ -205,6 +208,7 @@ ul.menu {
 @mixin headings {
 	text-align: center;
 	font-family: 'Dancing Script', cursive;
+	color: $navyBlue;
 }
 
 #party {
@@ -218,16 +222,12 @@ ul.menu {
 			font-weight: 800;
 			text-align: center;
 			margin-top: 15px;
-		}
-		.best {
-			color: $guyBlue;
+			font-family: 'Oswald', sans-serif;
 		}
 		span {
-			color: $girlPink;
-			font-size: 16px;
+			font-size: 14px;
 			text-transform: uppercase;
-			display: block;
-			text-align: center;
+			color: $darkOlive;
 		}
 		p {
 			text-align: center;
@@ -238,8 +238,6 @@ ul.menu {
 				border-radius: 50%;
 				border: 6px solid #fff;
 				box-shadow: 5px 5px 10px rgba(127,125,126,.7), -5px -5px 10px rgba(127,125,126,.7);
-				width: 250px;
-				height: 250px;
 				text-align: center;
 			}
 		}
@@ -256,7 +254,7 @@ ul.menu {
 #venue {
 	.welcome-wrapper {
 		background: #f1f1f1;
-		color: #000;
+		color: $navyBlue;
 		padding: 30px;
 		font-size: 16px;
 		text-align: center;
@@ -270,10 +268,14 @@ ul.menu {
 			color: #fff;
 		}
 	}
+	p {
+		font-size: 20px;
+		font-family: 'Oswald', sans-serif;
+	}
 	p.venue-info {
 		text-align: center;
 		font-family: 'Oswald', sans-serif;
-		color: $gold;
+		color: $darkOlive;
 		a {
 			transition: all 0.3s ease;
 			&:hover {
@@ -338,13 +340,22 @@ footer {
 		span {
 			color: #d12026;
 		}
-		a {
+		a.myEmail {
 			color: #7a7a7a;
 			transition: all 0.4s ease;
 			text-decoration: none;
 			outline: 0;
 			&:hover {
 				color: #f56d45;
+			}
+		}
+		a.weddingEmail {
+			color: #7a7a7a;
+			transition: all 0.4s ease;
+			text-decoration: none;
+			outline: 0;
+			&:hover {
+				color: $lightOlive;
 			}
 		}
 	}
