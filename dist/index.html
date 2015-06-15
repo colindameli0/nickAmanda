@@ -7,11 +7,12 @@
 	<link rel="shortcut icon" href="images/favicon-96x96.png" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300|Dancing+Script' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<div id="home">
-		<div class="wrap">
+		<div id="wrap" class="wrap">
 			<div class="inner-wrap">	
 				<h1 class="lovers">Amanda &amp; Nick</h1>
 				<p>Come celebrate with us <span>Saturday September 26, 2015<span></p>
@@ -19,11 +20,7 @@
 		</div>
 	</div><!-- ../home -->
 	
-	<nav>
-		<div class="menu-icon">
-			<div class="left">Menu</div>
-			<div class="right">☰</div>
-		</div>
+	<nav id="nav">
 		<div class="emblem">
 			<a href="#home">
 				<img src="images/emblem-dark.png">
@@ -32,122 +29,152 @@
 		<ul class="menu">
 			<li><a href="#venue">Venue</a></li>
 			<li><a href="#party">Wedding Party</a></li>
+			<li id="mobile"><a href="#rsvp">RSVP</a></li>
 			<li><a href="#registry">Registry</a></li>
-			<li><a href="#rsvp">RSVP</a></li>
-			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
 
-	<div id="venue">
-		<h1>We're Getting Married</h1>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="welcome-wrapper">
-						<p>Welcome! We are both very excited for all of you to share our wedding day in the fall. This little website will let you meet the lovely members of our wedding party, view the venue and accommodations, contribute to our gift registry, and most importantly, RSVP for the big day!</p>
+
+	<div class="everything-wrapper">
+
+		<div id="showMe" class="right-tab">
+			<a href=" http://Tassonewedding15.rsvpify.com" target="_blank"><p>R<br>S<br>V<br>P</p></a>
+		</div>
+
+		<div id="venue">
+			<h2 class="animateblock">We're Getting Married!</h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="welcome-wrapper">
+							<p>Welcome! We are both very excited for all of you to share our wedding day in the fall. This little website will let you meet the lovely members of our wedding party, view the venue and accommodations, contribute to our gift registry, and most importantly, RSVP for the big day!</p>
+						</div>
+						<p class="venue-info">Saturday September 26, 2015 at <strong><a href="http://bondhead.clublink.ca" target="_blank">The Club at Bond Head</a></strong></p>
+						<p class="accomodations">Need Accomodations? Receive special rates with <strong><a href="images/accomodations.pdf" target="_blank" class="print">Best Western Voyageur Place Hotel</a></strong></p>
 					</div>
-					<p class="venue-info">Saturday September 26, 2015 at <strong><a href="http://bondhead.clublink.ca" target="_blank">The Club at Bond Head</a></strong></p>
-					<p class="accomodations">Need Accomodations? Receive special rates with <strong><a href="images/accomodations.pdf" target="_blank" class="print">Best Western Voyageur Place Hotel</a></strong></p>
 				</div>
-					<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-12">
 						<div id="map-canvas"></div>
 					</div>
+				</div>
+			</div><!-- ../container -->
+		</div><!-- .../venue -->
+
+		<div id="party">
+			<i class=" animateblock fa fa-heart fa-2x"></i>
+			<h2 class="animateblock">Bridesmaids &amp; Groomsmen </h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="animateblock btm">
+						  	<div class="headShot">
+						  		<img src="images/jessica.jpg">
+						  	</div>
+						  	<p class="name">Jessica Pietrusiak<span> Maid of Honour</span></p>
+						  	<p class="bio">The bride's favourite, and only sister, Jessica, has recently finished her law degree at the University of Ottawa. This summer she'll begin an articling position at Stikeman Elliot in downtown Toronto.</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="animateblock btm">
+						  	<div class="headShot">
+						  		<img src="images/lauren.jpg">
+						  	</div>
+						  	<p class="name">Lauren Herridge</p>
+						  	<span></span>
+						  	<p class="bio">Having first met the bride and groom in high school, Lauren has been close friends with the couple for over 10 years. She is a physiotherapist at Southlake Hospital in Newmarket, and a mama to her 120lb Bernese Mountain dog, Sulley. </p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="animateblock btm">
+						  	<div class="headShot">
+						  		<img src="images/danielle.jpg">
+						  	</div>
+						  	<p class="name">Danielle Tassone</p>
+						  	<span></span>
+						  	<p class="bio">Obviously the one with the good looks in the family, Danielle is Nick's younger sister. She is a design consultant at Paradise Homes, and a yogi extraordinaire.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="animateblock btm">
+						  	<div class="headShot">
+						  		<img src="images/chris.jpg">
+						  	</div>
+						  	<p class="name">Chris Lubker <span>Best Man</span></p>
+						  	<p class="bio">Having met when they were neighbors in Bradford, Chris and Nick have been best of friends for over 20 years now. Chris, recently married to his beautiful wife Jessica, runs his own custom carpentry business.</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="animateblock btm">
+						  	<div class="headShot">
+						  		<img src="images/andrew.jpeg">
+						  	</div>
+						  	<p class="name">Andrew Guytingco</p>
+						  	<span></span>
+						  	<p class="bio">Andrew has known the couple from their elementary school days at St. Nicholas. This world traveller has visited parts of Africa, Asia, and Europe, along the way donating his time and money to worthy charities. Andrew is a successful engineer, and operates his own engineering company in Newmarket.</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="animateblock btm">
+					  	<div class="headShot">
+					  		<img src="images/neil.jpg">
+					  	</div>
+					  	<p class="name">Neil Dattani</p>
+					  	<span></span>
+					  	<p class="bio">Neil met the couple when he and Nick began their first year of medical school at the University of Toronto. Now five years, and countless library study sessions later, Neil is in his second year as a resident in Family Medicine at Sunnybrook Hospital in Toronto.</p>
+					</div>
+					</div>
+				</div>
+			</div><!-- ../container -->
+		</div><!-- ../party -->
+
+		<div id="registry">
+			<h2 class="animateblock">We Are Registered at</h2>
+			<div class="container">
+				<div class="row animateblock">
+					<div class="col-lg-4">
+						<div class="reg-wrap">
+							<a href="http://www.myregistry.com/wedding-registry/Amanda-Pietrusiak-Nick-Tassone-Bradford-Ontario/819706" target="_blank"><img src="images/myreg.jpg"></a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="pass-wrap">
+							<h4 class="password">Search <strong><em>tassone</em></strong> and use password <strong><em>wedding</em></strong> to login to both.</h4>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="reg-wrap">
+							<a href="http://www2.thebay.com/giftregistry/" target="_blank"><img src="images/hbc.jpg"></a>
+						</div>
+					</div>
+				</div>
 			</div>
+		</div><!-- ../registry -->
+
+		<div id="mobileRSVP">
+			<a href=" http://Tassonewedding15.rsvpify.com" target="_blank">Click Here To RSVP</a>
 		</div>
-	</div><!-- .../venue -->
 
-	<div id="party">
-		<h1 class="animateblock">Bridesmaids &amp; Groomsmen </h1>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="animateblock btm">
-					  	<div class="headShot">
-					  		<img src="images/andrew.jpeg">
-					  	</div>
-					  	<p class="name">Jessica Pietrusiak<span> Maid of Honour</span></p>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero.</p>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="animateblock btm">
-					  	<div class="headShot">
-					  		<img src="images/emblem-dark.png" height="495" width="500">
-					  	</div>
-					  	<p class="name">Lauren Herridge</p>
-					  	<span></span>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero.</p>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="animateblock btm">
-					  	<div class="headShot">
-					  		<img src="images/andrew.jpeg">
-					  	</div>
-					  	<p class="name">Danielle Tassone</p>
-					  	<span></span>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="animateblock btm">
-					  	<div class="headShot">
-					  		<img src="images/andrew.jpeg">
-					  	</div>
-					  	<p class="name">Chris Lubker <span>Best Man</span></p>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero.</p>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="animateblock btm">
-					  	<div class="headShot">
-					  		<img src="images/andrew.jpeg">
-					  	</div>
-					  	<p class="name">Andrew Guytingco</p>
-					  	<span></span>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero.</p>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="animateblock btm">
-				  	<div class="headShot">
-				  		<img src="images/andrew.jpeg">
-				  	</div>
-				  	<p class="name">Neil Dattani</p>
-				  	<span></span>
-				  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum, possimus reprehenderit beatae facere officia cumque suscipit, nobis maiores, temporibus magnam sed libero.</p>
-				</div>
-				</div>
-			</div>
-
-		</div><!-- ../container -->
-	</div><!-- ../party -->
-
-	<div id="rsvp">
-	</div><!-- .../rsvp -->
-
-	<div id="registry">
-	</div><!-- .../registry -->
+	</div><!-- .../everything-wrapper -->
 
 	<footer>
 		<div class="footer-container">
-			<p>If you have any questions please contact us <a class="weddingEmail" href="mailto:tassonewedding2015@gmail.com">HERE</a></p>
-			<p>© 2015  - Built with <span>&hearts;</span> by <a class="myEmail" href="http://www.colindamelio.com" target="_">Colin D'Amelio</a></p>
+			<p>If you have any questions please <a class="weddingEmail" href="mailto:tassonewedding2015@gmail.com">contact us</a></p>
+			<p class="copy">Built with <span>&#x02665;</span> by <a class="colin" target="_blank" href="http://www.colindamelio.com">Colin D'Amelio</a></p>
 		</div>
 	</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="scripts/jquery.sticky.js"></script>
-<script src="scripts/app.js"></script>
 <script src="scripts/map.js"></script>
 <script src="scripts/animate.js"></script>
-<script src="scripts/countdown.js"></script>
+<script src="scripts/app.js"></script>
 </body>
 </html>

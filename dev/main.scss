@@ -60,9 +60,100 @@ input:focus::-webkit-input-placeholder {
  	list-style-type: none;
  }
 
+.fa-heart {
+	width: 100%;
+	text-align: center;
+	color: $lightOlive;
+}
 
 // font-family: 'Oswald', sans-serif;
 // font-family: 'Dancing Script', cursive;
+
+.everything-wrapper {
+	position: relative;
+}
+
+.right-tab {
+	display: block;
+	z-index: 999999;
+	position: fixed;
+	right: 40px;
+	top: 50%;
+	background: #fff;
+	opacity: .95;
+	-webkit-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+	width: 50px;
+	text-align: center;
+	p {
+		margin: 10px 0;
+		color: $navyBlue;
+		transition: all 0.4s ease;
+	}
+	a {
+		transition: all 0.4s ease;
+		outline: 0;
+		color: #888;
+		display: block;
+		width: 100%;
+		height: auto;		
+		&:hover {
+			text-decoration: none;
+		}
+		&:hover p {
+			color: $lightOlive;
+			text-decoration: none;
+		}
+		&:hover .right-tab {
+			-webkit-box-shadow: 0 5px 20px rgba(214,208,185,1);
+		}
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+    .right-tab {
+        display: none !important;
+    }
+}
+
+#mobile {
+	display: none !important;
+}
+
+#mobileRSVP {
+	display: none !important;
+	width: 85%;
+	margin: 10px auto;
+	text-align: center;
+	border: 1px solid #dedede;
+	a {
+		background: $lightOlive;
+		color: $navyBlue;
+		opacity: .95;
+		width: 100%;
+		text-align: center;		
+		display: block;
+		width: 100%;
+		padding: 10px;
+		transition: all 0.4s ease;
+		&:hover {
+			text-decoration: none;
+			color: $darkOlive;
+			transition: all 0.4s ease;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+    #mobileRSVP {
+        display: block !important;
+    }
+
+    #mobile {
+    	display: inline-block !important;
+    }
+}
+
 
 
 
@@ -70,7 +161,7 @@ input:focus::-webkit-input-placeholder {
 
 #home {
 	position: relative;
-	background: url('../dist/images/background.jpg');
+	background: url('images/background.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -108,7 +199,7 @@ input:focus::-webkit-input-placeholder {
 nav {
 	height: auto;
 	overflow: auto;
-	z-index: 9999;
+	z-index: 9999999;
 	background: #fff;
 	opacity: .95;
 	-webkit-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -151,9 +242,6 @@ ul.menu {
 	}
 }
 
-.menu-icon {
-	display: none;
-}
 
 //MOBILE NAV MENU
 @media (max-width: 768px) {
@@ -182,23 +270,6 @@ ul.menu {
 			}
 		}
 	}
-
-	.menu-icon {
-		display: block;
-		padding: 5px 30px;
-		cursor: pointer;
-		.left {
-			width: 50%;
-			float: left;
-			font-size: 22px;
-		}
-		.right {
-			width: 50%;
-			float: right;
-			text-align: right;
-			font-size: 22px;
-		}
-	}
 }
 
 // *********************************
@@ -209,11 +280,12 @@ ul.menu {
 	text-align: center;
 	font-family: 'Dancing Script', cursive;
 	color: $navyBlue;
+	font-size: 38px;
 }
 
 #party {
 	margin-top: 50px;
-	h1 {
+	h2 {
 		@include headings;
 	}
 	.row {
@@ -231,6 +303,9 @@ ul.menu {
 		}
 		p {
 			text-align: center;
+		}
+		p.bio {
+			font-family: 'Oswald', sans-serif;
 		}
 		.headShot {
 			text-align: center;
@@ -252,17 +327,17 @@ ul.menu {
 // *********************************
 
 #venue {
+	margin-top: 50px;
 	.welcome-wrapper {
-		background: #f1f1f1;
 		color: $navyBlue;
 		padding: 30px;
 		font-size: 16px;
 		text-align: center;
-		width: 100%;
+		width: 70%;
 		margin: 25px auto;
+		background: #f1f1f1;
 	}
-	h1 {
-		margin-top: 50px;
+	h2 {
 		@include headings;
 		a {
 			color: #fff;
@@ -299,30 +374,44 @@ ul.menu {
 	margin-top: 25px;
 	display: block;
 	height: 0;
-	padding-bottom: 50%;
+	padding-bottom: 40%;
 	width: 100%;
 	margin: 25px auto;
+	.firstHeading {
+		font-size: 16px;
+	}
+	#bodyContent p {
+		font-size: 14px;
+	}
 }
 
-
-// *********************************
-// RSVP #rsvp
-// *********************************
-
+@media (max-width: 480px) {
+	#map-canvas {
+		height: 350px;
+	}
+}
+	
 
 // *********************************
 // REGISTRY #registry
 // *********************************
 
 #registry {
-	h4 {
-		text-align: center;
-		text-transform: uppercase;
-		font-weight: 200;
-		font-family: 'Oswald', sans-serif;
+	margin-bottom: 25px;
+	h2 {
+		@include headings;
 	}
-	.reg {
+	.reg-wrap {
 		text-align: center;
+	}
+	.pass-wrap {
+		color: $navyBlue;
+		padding: 30px;
+		font-size: 16px;
+		text-align: center;
+		width: 70%;
+		margin: 25px auto;
+		background: #f1f1f1;
 	}
 }
 
@@ -332,7 +421,8 @@ ul.menu {
 
 footer {
 	background-color: #222;
-	padding: 30px ;
+	padding: 30px;
+	clear: both;
 	.footer-container {
 		text-align: center;
 		font-size: 16px;
@@ -340,22 +430,28 @@ footer {
 		span {
 			color: #d12026;
 		}
-		a.myEmail {
-			color: #7a7a7a;
-			transition: all 0.4s ease;
-			text-decoration: none;
+		a.weddingEmail {
 			outline: 0;
+			color: $lightOlive;
+			transition: 0.5s all ease !important;
 			&:hover {
-				color: #f56d45;
+				transition: .5s all ease;
+				color: #B5AB85;
+				text-decoration: none; 
 			}
 		}
-		a.weddingEmail {
-			color: #7a7a7a;
-			transition: all 0.4s ease;
-			text-decoration: none;
-			outline: 0;
-			&:hover {
-				color: $lightOlive;
+		.copy {
+			font-size: 12px;
+			span {
+				color: #d12026;
+			}
+			a {
+				color: #7a7a7a;
+				transition: all 0.5s ease;
+				&:hover {
+					color: $lightOlive;
+					text-decoration: none;
+				}
 			}
 		}
 	}
